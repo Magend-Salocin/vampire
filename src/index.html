@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vampire Remastered — Thomson MO5</title>
+<link rel="stylesheet" href="./assets/game.css">
+</head>
+<body>
+<div id="app">
+  <div id="toolbar">
+    <span class="brand-label">🧛 VAMPIRE</span>
+    <button class="btn" id="btnPlay">▶ JOUER</button>
+    <button class="btn" id="btnEditor">✏ ÉDITEUR</button>
+    <button class="btn" id="btnCRT">📺 CRT</button>
+    <button class="btn" id="btnSound">🔊 SON</button>
+    <button class="btn" id="btnHelp">? AIDE</button>
+    <span class="fps-counter" id="fpsCounter">FPS:60</span>
+  </div>
+  <div id="gameWrapper">
+    <canvas id="gameCanvas"></canvas>
+    <canvas id="crtOverlay"></canvas>
+    <div id="ui"></div>
+    <div id="editorPanel">
+      <h3>⚒ ÉDITEUR</h3>
+      <div class="editor-mode-label">MODE:</div>
+      <div class="editor-mode-options">
+        <button class="btn editor-mode-button active" id="modePlace">TUILE</button>
+        <button class="btn editor-mode-button" id="modeEnemy">ENNEMI</button>
+        <button class="btn editor-mode-button" id="modeItem">OBJET</button>
+        <button class="btn editor-mode-button" id="modeErase">EFFACER</button>
+      </div>
+      <div class="tile-palette" id="tilePalette"></div>
+      <button class="btn editor-action-button" id="btnExport">📥 EXPORTER JSON</button>
+      <button class="btn editor-action-button" id="btnImport">📤 IMPORTER</button>
+      <button class="btn editor-action-button" id="btnNewMap">🗺 NOUVELLE CARTE</button>
+      <div class="map-info" id="mapInfo"></div>
+    </div>
+  </div>
+  <div id="titleScreen">
+    <div class="title-kicker">— THOMSON MO5 —</div>
+    <h1>Vampire</h1>
+    <h2>REMASTERED</h2>
+    <div class="title-year">1986 → 2024</div>
+    <p class="title-prompt">APPUYER SUR ENTRÉE OU CLIQUER POUR JOUER</p>
+    <div class="title-controls">
+      ← → DÉPLACER &nbsp; Z/ESPACE SAUTER &nbsp; X ATTAQUER<br>
+      E INVENTAIRE &nbsp; ENTRÉE INTERAGIR
+    </div>
+  </div>
+  <div id="gameOver">
+    <h2>GAME OVER</h2>
+    <p>Appuyez sur ENTRÉE pour recommencer</p>
+  </div>
+  <div id="winScreen">
+    <h2>🧛 VICTOIRE ! 🧛</h2>
+    <p>Vous avez vaincu le Vampire !<br>Le village est sauvé.<br><br>Score final : <span id="finalScore">0</span></p>
+    <button class="btn play-again-button" id="btnPlayAgain">REJOUER</button>
+  </div>
+  <div id="messageBox"></div>
+</div>
+
+<script type="module" src="./main.js"></script>
+</body>
+</html>

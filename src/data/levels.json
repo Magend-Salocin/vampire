@@ -1,0 +1,53 @@
+[
+  {
+    "id": "graveyard_01",
+    "name": "Cimetière",
+    "tiles": null,
+    "enemies": [
+      { "type": "bat", "x": 180, "y": 40, "patrolX": [100, 220] },
+      { "type": "ghost", "x": 120, "y": 80, "patrolX": [80, 160] },
+      { "type": "bat", "x": 250, "y": 60, "patrolX": [200, 300] }
+    ],
+    "items": [
+      { "type": "key", "x": 56, "y": 95 },
+      { "type": "cross", "x": 210, "y": 150 },
+      { "type": "garlic", "x": 140, "y": 150 }
+    ],
+    "portal": { "x": 290, "y": 144, "targetLevel": 1 },
+    "bgColor": "#000011"
+  },
+  {
+    "id": "castle_ext",
+    "name": "Château",
+    "tiles": null,
+    "enemies": [
+      { "type": "redmon", "x": 60, "y": 140, "patrolX": [30, 100] },
+      { "type": "bat", "x": 200, "y": 50, "patrolX": [150, 260] },
+      { "type": "redmon", "x": 250, "y": 140, "patrolX": [200, 300] },
+      { "type": "ghost", "x": 160, "y": 80, "patrolX": [100, 220] }
+    ],
+    "items": [
+      { "type": "potion", "x": 80, "y": 110 },
+      { "type": "book", "x": 200, "y": 90 }
+    ],
+    "portal": { "x": 148, "y": 144, "targetLevel": 2 },
+    "bgColor": "#110000"
+  },
+  {
+    "id": "castle_int",
+    "name": "Donjon",
+    "tiles": null,
+    "enemies": [
+      { "type": "redmon", "x": 50, "y": 155, "patrolX": [20, 90] },
+      { "type": "ghost", "x": 150, "y": 155, "patrolX": [100, 200] },
+      { "type": "redmon", "x": 250, "y": 155, "patrolX": [220, 300] },
+      { "type": "serpent", "x": 160, "y": 80, "patrolX": [120, 200] },
+      { "type": "boss", "x": 160, "y": 30, "patrolX": [120, 200], "hp": 10, "maxHp": 10 }
+    ],
+    "items": [
+      { "type": "amulet", "x": 100, "y": 75 }
+    ],
+    "portal": null,
+    "bgColor": "#110011"
+  }
+]

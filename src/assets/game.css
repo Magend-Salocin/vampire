@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;font-family:'Press Start 2P',monospace;overflow:hidden;}
+  #app{position:relative;width:100%;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  #gameWrapper{position:relative;image-rendering:pixelated;}
+  #gameCanvas{display:block;image-rendering:pixelated;image-rendering:crisp-edges;}
+  #crtOverlay{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:10;}
+  #ui{position:absolute;top:0;left:0;width:100%;z-index:20;pointer-events:none;}
+  #toolbar{display:flex;gap:8px;align-items:center;justify-content:center;padding:8px;background:#111;border-bottom:2px solid #FF0000;flex-wrap:wrap;}
+  .brand-label{color:#FF0000;font-size:8px;}
+  .fps-counter{color:#00FF00;font-size:7px;}
+  .btn{background:#111;border:2px solid #FF0000;color:#FFFF00;font-family:'Press Start 2P',monospace;font-size:8px;padding:6px 10px;cursor:pointer;transition:all .1s;}
+  .btn:hover{background:#FF0000;color:#000;}
+  .btn.active{background:#FF0000;color:#000;}
+  #editorPanel{display:none;position:absolute;right:0;top:0;width:220px;height:100%;background:#0a0a0a;border-left:2px solid #FF0000;z-index:30;overflow-y:auto;padding:8px;}
+  #editorPanel h3{color:#FF0000;font-size:8px;margin-bottom:8px;text-align:center;}
+  .editor-mode-label{color:#00FFFF;font-size:7px;margin-bottom:4px;}
+  .editor-mode-options{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px;}
+  .editor-mode-button{font-size:7px;padding:4px;}
+  .tile-palette{margin-bottom:8px;}
+  .editor-action-button{width:100%;font-size:7px;margin-top:4px;}
+  .map-info{color:#888;font-size:6px;margin-top:8px;}
+  .tileBtn{width:36px;height:36px;margin:2px;cursor:pointer;border:2px solid #333;display:inline-block;image-rendering:pixelated;}
+  .tileBtn.selected{border-color:#FFFF00;}
+  #messageBox{position:absolute;bottom:60px;left:50%;transform:translateX(-50%);background:#000;border:2px solid #FF0000;color:#FFFF00;font-size:8px;padding:8px 16px;display:none;z-index:50;text-align:center;}
+  #titleScreen{position:absolute;top:0;left:0;width:100%;height:100%;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:100;}
+  #titleScreen h1{color:#FF0000;font-size:20px;letter-spacing:4px;text-shadow:0 0 20px #FF0000;animation:pulse 1.5s infinite;}
+  .title-kicker{color:#FF0000;font-size:8px;margin-bottom:8px;letter-spacing:2px;}
+  #titleScreen h2{color:#FFFF00;font-size:9px;margin-top:12px;letter-spacing:2px;}
+  #titleScreen p{color:#FFF;font-size:7px;margin-top:40px;animation:blink 1s step-end infinite;}
+  .title-year{margin-top:30px;color:#888;font-size:7px;}
+  #titleScreen p.title-prompt{margin-top:50px;}
+  .title-controls{margin-top:20px;color:#00FFFF;font-size:7px;line-height:16px;text-align:center;}
+  @keyframes pulse{0%,100%{text-shadow:0 0 20px #FF0000;}50%{text-shadow:0 0 40px #FF0000,0 0 60px #FF0000;}}
+  @keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
+  #gameOver{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.85);display:none;flex-direction:column;align-items:center;justify-content:center;z-index:90;}
+  #gameOver h2{color:#FF0000;font-size:16px;animation:pulse 1s infinite;}
+  #gameOver p{color:#FFFF00;font-size:8px;margin-top:20px;}
+  #winScreen{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.9);display:none;flex-direction:column;align-items:center;justify-content:center;z-index:90;}
+  #winScreen h2{color:#FFFF00;font-size:14px;animation:pulse 1s infinite;}
+  #winScreen p{color:#FFF;font-size:8px;margin-top:16px;text-align:center;line-height:20px;}
+  .play-again-button{margin-top:20px;}
+  canvas{cursor:crosshair;}
